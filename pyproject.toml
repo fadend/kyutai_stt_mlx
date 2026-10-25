@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kyutai_stt_mlx"
+description = "Transcribe audio using Kyutai AI models on a Mac"
+authors = [
+  {name = "David Faden", email = "dfaden@gmail.com"},
+]
+version = "0.1.0"
+license = {text = "MIT License"}
+dependencies = ["huggingface_hub", "moshi_mlx==0.2.12", "numpy", "resampy", "sentencepiece", "soundfile"]
+
+[project.scripts]
+kyutai_stt_mlx_transcribe = "kyutai_stt_mlx.transcribe:main"
